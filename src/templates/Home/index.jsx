@@ -1,11 +1,18 @@
+import { Button } from "../../components/Button";
+import { Heading } from "../../components/Heading";
 import { useCounterContext } from "../../contexts/CounterContext"
 
 export const Home = () => {
-  const [state, dispatch] = useCounterContext();
+  const [state, actions] = useCounterContext();
+
+  console.log(state);
 
   return (
     <div>
-      <h1>Hello Word!</h1>
+      <Heading />
+      <div>
+        <Button onButtonClick={() => actions.increase()}>Increase counter</Button>
+      </div>
     </div>
   )
 }
