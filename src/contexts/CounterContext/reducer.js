@@ -23,7 +23,7 @@ export const reducer = (state, action) => {
       return { ...state, loading: false, counter: state.counter + 1 };
     }
     case actionTypes.ASYNC_INCREASE_ERROR: {
-      return { ...state, loading: false };
+      return { ...state, loading: false};
     }
     default: {
       return { ...state };
